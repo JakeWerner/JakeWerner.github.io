@@ -1,6 +1,6 @@
 
 window.addEventListener('scroll', function() {
-    var landingPage = document.getElementById('landingPage');
+    var landingPage = document.getElementById('landing');
     var scrollDown = document.getElementById('scrollDown');
     var content = document.getElementById('content');
     var scrollPosition = window.scrollY;
