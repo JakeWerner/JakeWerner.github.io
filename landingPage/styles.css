@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #eeeeee;
+    background-color: #333;
 }
 
 .header {
@@ -44,39 +44,84 @@ body {
     background-color: #555;
 }
 
-.landing {
-    position: relative;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+/* CSS for Slideshow Container */
+.slideshow-container {
+    position: relative; /* Relative position */
+    max-width: 1000px; /* Maximum width */
+    margin: auto; /* Center horizontally */
 }
 
-.landing-image {
-    position: absolute;
-    top: 0;
-    left: 0;
+.slideshow-container img {
     width: 100%;
-    height: 100%;
-    z-index: -1;
+    height: 400px; /* or any other desired height */
 }
 
-.landing-image img {
-    width: 100%;
-    height: 100%;
+/* Slideshow container styles */
+.slideshow-container {
+    position: relative; /* Relative position */
+    max-width: 1000px; /* Maximum width */
+    margin: auto; /* Center horizontally */
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+    display: none; /* Hide images by default */
+}
+
+@keyframes fade {
+    from { opacity: 0; } /* Start with opacity 0 */
+    to { opacity: 1; } /* End with opacity 1 */
+}
+
+.slideshow-container img {
+    width: 100%; /* Full width */
+    height: 550px; /* Fixed height for all images */
     object-fit: cover;
 }
 
+
+/* Landing section styles */
+/* Landing section styles */
+/* Landing section styles */
+.landing {
+    position: relative; /* Relative position */
+}
+
+/* Landing section styles */
+.landing {
+    position: relative; /* Relative position */
+}
+
 .landing-text {
-    width: 50%;
+    position: absolute; /* Absolute position */
+    bottom: 0; /* Align to the bottom */
+    left: 50%; /* Align to the center horizontally */
+    transform: translateX(-50%); /* Center the text box horizontally */
+    width: 100%; /* Fixed width for the text box */
+    max-width: 960px; /* Maximum width for the text box */
+    background-color: rgba(0, 0, 0, 0.5); /* Background color with transparency */
+    padding: 20px; /* Padding for the text box */
+    color: white; /* Text color */
+    text-align: center; /* Center text */
+    font-family: system-ui;
+}
+
+.landing-text h1 {
+    font-size: 3em; /* Adjust font size as needed */
+    margin: 0; /* Remove default margin */
+}
+
+.landing-text p {
+    font-size: 1.5em; /* Adjust font size as needed */
+    margin: 0; /* Remove default margin */
+}
+
+.WelcomeText{
+    position: relative;
     text-align: center;
-    justify-content: center;
+    font-family: system-ui;
+    font-size: 16px;
     align-items: center;
-    background-color: rgba(133, 133, 133, 0.7);
-    font-size: 24px;
-    padding: 20px;
-    border-radius: 10px;
-    margin-top: auto; /* Push the text box towards the center */
-    margin-bottom: 150px; /* Add some space between the text box and the bottom */
+    color: #CFB87C;
 }
