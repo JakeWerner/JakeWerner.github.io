@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #333;
+}
+
+.header {
+    background-color: #333;
+    padding: 20px 0;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+.header ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.header li {
+    display: inline;
+    margin-right: 20px;
+}
+.header li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 20px; /* Add rounded corners */
+    transition: color 0.3s, background-color 0.3s;
+}
+.header li a:hover {
+    background-color: #555;
+    color: #CFB87C;
+}
+
+.landing {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.landing-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.landing-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.landing-text {
+    text-align: center;
+    background-color: rgba(158, 158, 158, 0.7);
+    font-size: 24px;
+    padding: 60px;
+    border-radius: 10px;
+    margin-top: auto; /* Push the text box towards the center */
+    margin-bottom: 150px; /* Add some space between the text box and the bottom */
+}
