@@ -4,40 +4,44 @@ body {
     background-color: #eeeeee;
 }
 
-header {
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
     background-color: #333;
     color: white;
-    position: fixed;
-    width: 100%;
-}
-  
-nav {
+    padding: 10px 0;
+    text-align: center;
+    z-index: 1000; /* Ensure the header stays on top of other content */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
-}
-  
-.header-logo a {
-    font-size: 35px;
-    text-decoration: none;
-    color: #CFB87C;
-}
-  
-.right-options a {   /*For the righthand header options*/
-    margin-left: 20px;
-    text-decoration: none;
-    padding: 10px 20px;
-    font-size: 24px;
-    font-family: fantasy, copperplate;
-    color: #CFB87C;
-    border-radius: 20px; /* Add rounded corners */
-    transition: color 0.3s, background-color 0.3s;
 }
 
-.right-options a:hover{ /*For the logo*/
-    background-color: #555;
+/* Style for the header logo */
+.header-logo {
+    margin-left: 20px; /* Adjust margin as needed */
+}
+
+/* Style for the header buttons */
+.header-buttons {
+    margin-right: 20px; /* Adjust margin as needed */
+}
+
+/* Style for the header button links */
+.header-buttons a {
     color: #CFB87C;
+    text-decoration: none;
+    font-size: 24px;
+    font-family: fantasy;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+}
+
+/* Change background color on hover */
+.header-buttons a:hover {
+    background-color: #555;
 }
 
 .landing {
