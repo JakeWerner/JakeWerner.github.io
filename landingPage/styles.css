@@ -4,33 +4,38 @@ body {
     background-color: #eeeeee;
 }
 
-.header {
+header {
     background-color: #333;
-    padding: 20px 0;
-    text-align: center;
+    color: white;
     position: fixed;
-    top: 0;
     width: 100%;
-    z-index: 1000;
 }
-.header ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-.header li {
-    display: inline;
-    margin-right: 20px;
-}
-.header li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 18px;
+  
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 10px 20px;
+}
+  
+.header-logo a {
+    font-size: 35px;
+    text-decoration: none;
+    color: #CFB87C;
+}
+  
+.right-options a {   /*For the righthand header options*/
+    margin-left: 20px;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 24px;
+    font-family: fantasy, copperplate;
+    color: #CFB87C;
     border-radius: 20px; /* Add rounded corners */
     transition: color 0.3s, background-color 0.3s;
 }
-.header li a:hover {
+
+.right-options a:hover{ /*For the logo*/
     background-color: #555;
     color: #CFB87C;
 }
@@ -64,7 +69,7 @@ body {
     text-align: center;
     justify-content: center;
     align-items: center;
-    background-color: rgba(223, 223, 223, 0.7);
+    background-color: rgba(133, 133, 133, 0.7);
     font-size: 24px;
     padding: 20px;
     border-radius: 10px;
