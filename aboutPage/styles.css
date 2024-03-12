@@ -43,3 +43,55 @@ body {
 .header-buttons a:hover {
     background-color: #555;
 }
+
+.intro {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #CFB87C; 
+    text-align: center; 
+    max-width: 960px; 
+    font-size: 16px;
+    font-family: system-ui;
+}
+/* Job item CSS */
+.job-item {
+    position: relative;
+    padding-left: 50px;
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    font-family: system-ui;
+}
+
+.company-logo img {
+    position: absolute;
+    top: 0;
+    width: 100px;
+    height: auto;
+    margin-right: 10px;
+    margin-top: 20px;
+}
+
+.job-details {
+    flex: 1;
+}
+
+.job-details h2 {
+    font-weight: bold;
+}
+
+.job-details .title{
+    font-size: 18px;
+    color: #CFB87C;
+}
+.job-details .dates {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.job-details .description {
+    font-size: 16px;
+    color: white;
+}
