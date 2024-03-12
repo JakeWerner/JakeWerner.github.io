@@ -117,11 +117,13 @@ body {
     margin: 0; /* Remove default margin */
 }
 
-.WelcomeText{
-    position: relative;
+.WelcomeText {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     text-align: center;
     font-family: system-ui;
     font-size: 16px;
-    align-items: center;
     color: #CFB87C;
+    max-width: 960px;
 }
