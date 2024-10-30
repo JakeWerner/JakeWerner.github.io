@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Update the text content
             jobTitleElement.textContent = jobTitles[titleIndex];
-            console.log(`Job title changed to: ${jobTitles[titleIndex]}`);
+            /*console.log(`Job title changed to: ${jobTitles[titleIndex]}`);*/
 
             // Add fade-in class to start fade-in animation
             jobTitleElement.classList.add('fade-in');
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Remove fade-in class after the animation completes to reset state
             setTimeout(() => {
                 jobTitleElement.classList.remove('fade-in');
-                console.log('Fade-in animation completed');
+                /*console.log('Fade-in animation completed');*/
             }, animationDuration);
         }, animationDuration);
     }
