@@ -1,0 +1,419 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1e1e1e; /* Dark Gray Background */
+    color: #f0f0f0; /* Light Text Color */
+    line-height: 1.6;
+}
+
+/* Navigation Bar */
+header {
+    background-color: #121212; /* Slightly Darker for Navbar */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 2em;
+}
+
+.logo a {
+    color: #00aaff; /* Blue Accent */
+    font-size: 1.5em;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 2em;
+}
+
+.nav-links a {
+    color: #f0f0f0;
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #00aaff; /* Blue Accent on Hover */
+}
+
+/* Burger Menu (for Mobile) */
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: #f0f0f0;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: url('../images/hero-bg.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 60px; /* To prevent overlap with fixed navbar */
+    position: relative
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    margin-bottom: 0.5em;
+    color: #00aaff; /* Blue Accent */
+    animation: fadeInDown 1s ease-out;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin-bottom: 1em;
+    color: #cccccc;
+    animation: fadeInUp 1s ease-out;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.75em 1.5em;
+    margin: 0.5em;
+    background-color: #00aaff; /* Blue Accent */
+    color: #1e1e1e;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0088cc; /* Darker Blue on Hover */
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border: 2px solid #00aaff;
+    color: #00aaff;
+}
+
+.btn-secondary:hover {
+    background-color: #00aaff;
+    color: #1e1e1e;
+}
+
+/* Rotating Job Title Styles */
+.job-title {
+    color: #00aaff; /* Blue Accent */
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+    min-width: 260px; /* Adjust based on the longest job title */
+    text-align: center;
+}
+
+/* Fade-in Animation */
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+
+/* Keyframes for Fade-In */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Fade-out Animation */
+.fade-out {
+    animation: fadeOut 0.5s ease-in-out forwards;
+}
+
+/* Keyframes for Fade-Out */
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+/* Add to .job-title in styles.css */
+.fade-in {
+    animation: fadeInSlide 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeInSlide {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-out {
+    animation: fadeOutSlide 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeOutSlide {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
+
+/* About Highlights */
+.about-highlights {
+    padding: 4em 2em;
+    background-color: #2c2c2c;
+    text-align: center;
+}
+
+.about-highlights h2 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+    color: #00aaff; /* Blue Accent */
+}
+
+.about-highlights p {
+    font-size: 1em;
+    color: #cccccc;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Portfolio Highlights */
+.portfolio-highlights {
+    padding: 4em 2em;
+    background-color: #1e1e1e;
+    text-align: center;
+}
+
+.portfolio-highlights h2 {
+    font-size: 2em;
+    margin-bottom: 1em;
+    color: #00aaff; /* Blue Accent */
+}
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em;
+}
+
+.project-card {
+    background-color: #2c2c2c;
+    padding: 1em;
+    border-radius: 10px;
+    width: 300px;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.project-card h3 {
+    margin: 0.5em 0;
+    color: #00aaff; /* Blue Accent */
+}
+
+.project-card p {
+    color: #cccccc;
+    font-size: 0.9em;
+    margin-bottom: 1em;
+}
+
+.project-card .btn {
+    background-color: #00aaff;
+    color: #1e1e1e;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.project-card .btn:hover {
+    background-color: #0088cc;
+}
+
+/* Footer */
+footer {
+    background-color: #121212;
+    color: #cccccc;
+    text-align: center;
+    padding: 1.5em 2em;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.social-links a {
+    color: #00aaff; /* Blue Accent */
+    margin: 0 0.5em;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #0088cc; /* Darker Blue on Hover */
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #121212;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+    }
+
+    .nav-links li {
+        margin: 1em 0;
+        text-align: center;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .projects {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Active Burger Menu */
+.nav-active {
+    display: flex !important;
+}
+
+/* Burger Animation */
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Scroll Down Arrow Styles */
+.scroll-down {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+
+.scroll-down button {
+    background: none; /* Remove default button background */
+    border: none; /* Remove default button border */
+    color: #00aaff; /* Arrow color */
+    font-size: 2em; /* Increase the size of the icon */
+    padding: 15px; /* Increase the clickable area */
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.scroll-down button:hover {
+    color: #0088cc; /* Darker color on hover */
+    transform: scale(1.2); /* Slightly enlarge the arrow on hover */
+}
+
+.scroll-down button:focus {
+    outline: 2px solid #00aaff; /* Visible outline for accessibility */
+    outline-offset: 4px;
+}
+
+.scroll-down i {
+    animation: bounce 3s infinite; /* Bouncing animation */
+    /* Ensure the icon is not being transformed in a way that hides it */
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Optional: Additional Hover Effects */
+.scroll-down button:hover i {
+    color: #0088cc; /* Darker color on hover */
+    transform: scale(1.2); /* Slightly enlarge the arrow on hover */
+}
+
+/* Ensure Smooth Scrolling (optional if using CSS method) */
+html {
+    scroll-behavior: smooth;
+}
+
